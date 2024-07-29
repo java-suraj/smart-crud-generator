@@ -1,0 +1,289 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Code</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    Include Prism.js and its CSS for syntax highlighting
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background */
+            color: #333; /* Dark font color for readability */
+        }
+        .code-container {
+            background-color: #ffffff; /* White background for code blocks */
+            color: #333; /* Dark font color for code blocks */
+            border: 1px solid #ccc; /* Light border for separation */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff; /* Blue copy button */
+            border-color: #007bff;
+            color: #ffffff; /* White text for button */
+        }
+        .copy-btn.copied {
+            background-color: #28a745; /* Green copied button */
+            border-color: #28a745;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3;
+        }
+        .card {
+            background-color: #ffffff; /* White card background */
+            color: #333; /* Dark font color for card text */
+            border: 1px solid rgba(0,0,0,.125); /* Light border for card */
+        }
+        h5 {
+            color: #007bff; /* Blue heading color */
+            font-size: 1.2rem; /* Larger font size for heading */
+            margin-bottom: 10px;
+        }
+        .btn-success {
+            background-color: #28a745; /* Green download button */
+            border-color: #28a745;
+            color: #ffffff; /* White text for button */
+        }
+        .btn-success:hover {
+            background-color: #218838; /* Darker green on hover */
+            border-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1 class="card-title text-center mb-0">Generated Code</h1>
+                <a th:href="@{/download}" class="btn btn-success ml-3">Download as Zip</a>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="entry : ${fileContent}">
+                    Display file name
+                    <h5 th:text="${entry.key}"></h5>
+                    Display file content with copy button
+                    <div class="code-container">
+                        <pre><code class="language-java" th:utext="${entry.value}"></code></pre>
+                        <button class="copy-btn btn btn-sm btn-primary" onclick="copyToClipboard(this)">Copy</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+Bootstrap toast message
+<div class="toast" id="copyToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000">
+    <div class="toast-header">
+        <strong class="mr-auto">Copied!</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Code snippet copied to clipboard.
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function copyToClipboard(button) {
+        var codeContainer = button.parentElement.querySelector('code');
+        var tempTextArea = document.createElement('textarea');
+        tempTextArea.value = codeContainer.innerText;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+
+        // Change button text to "Copied!"
+        button.textContent = 'Copied!';
+        button.classList.add('copied');
+
+        // Revert button text after 4 seconds
+        setTimeout(function() {
+            button.textContent = 'Copy';
+            button.classList.remove('copied');
+        }, 4000);
+
+        // Show toast message
+        var toastElement = document.getElementById('copyToast');
+        var toast = new bootstrap.Toast(toastElement);
+        toast.show();
+    }
+</script>
+
+Initialize Prism.js for syntax highlighting
+<script>
+    Prism.highlightAll();
+</script>
+
+</body>
+</html>
+ -->
+ 
+ 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Code</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Include Prism.js and its CSS for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background */
+            color: #333; /* Dark font color for readability */
+        }
+        .code-container {
+            background-color: #ffffff; /* White background for code blocks */
+            color: #333; /* Dark font color for code blocks */
+            border: 1px solid #ccc; /* Light border for separation */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff; /* Blue copy button */
+            border-color: #007bff;
+            color: #ffffff; /* White text for button */
+        }
+        .copy-btn.copied {
+            background-color: #28a745; /* Green copied button */
+            border-color: #28a745;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3;
+        }
+        .card {
+            background-color: #ffffff; /* White card background */
+            color: #333; /* Dark font color for card text */
+            border: 1px solid rgba(0,0,0,.125); /* Light border for card */
+        }
+        h5 {
+            color: #007bff; /* Blue heading color */
+            font-size: 1.2rem; /* Larger font size for heading */
+            margin-bottom: 10px;
+        }
+        .btn-success {
+            background-color: #28a745; /* Green download button */
+            border-color: #28a745;
+            color: #ffffff; /* White text for button */
+        }
+        .btn-success:hover {
+            background-color: #218838; /* Darker green on hover */
+            border-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1 class="card-title text-center mb-0">Generated Code</h1>
+                <!-- <a th:href="@{/download}" class="btn btn-success ml-3">Download as Zip</a> -->
+                <a href="/" class="btn btn-success ml-3">Home</a>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="entry : ${fileContent}">
+                    <!-- Display file name -->
+                    <h5 th:text="${entry.key}"></h5>
+                    <!-- Display file content with copy button -->
+                    <div class="code-container">
+                        <pre><code class="language-java" th:utext="${entry.value}"></code></pre>
+                        <button class="copy-btn btn btn-sm btn-primary" onclick="copyToClipboard(this)">Copy</button>
+                    </div>
+                </li>
+                 
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Bootstrap toast message -->
+<div class="toast" id="copyToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000">
+    <div class="toast-header">
+        <strong class="mr-auto">Copied!</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Code snippet copied to clipboard.
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function copyToClipboard(button) {
+        var codeContainer = button.parentElement.querySelector('code');
+        var tempTextArea = document.createElement('textarea');
+        tempTextArea.value = codeContainer.innerText;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+
+        // Change button text to "Copied!"
+        button.textContent = 'Copied!';
+        button.classList.add('copied');
+
+        // Revert button text after 4 seconds
+        setTimeout(function() {
+            button.textContent = 'Copy';
+            button.classList.remove('copied');
+        }, 4000);
+
+        // Show toast message
+        var toastElement = document.getElementById('copyToast');
+        var toast = new bootstrap.Toast(toastElement);
+        toast.show();
+    }
+
+    // Log file content to the console
+    document.addEventListener('DOMContentLoaded', function() {
+        var fileContent = /*[[${fileContent}]]*/ {};
+        console.log('File Content:', fileContent);
+        for (var key in fileContent) {
+            if (fileContent.hasOwnProperty(key)) {
+                console.log('Entry:', key, 'Value:', fileContent[key]);
+            }
+        }
+    });
+</script>
+
+<!-- Initialize Prism.js for syntax highlighting -->
+<script>
+    Prism.highlightAll();
+</script>
+
+</body>
+</html>
+
+ 
