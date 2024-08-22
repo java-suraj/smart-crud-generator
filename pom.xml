@@ -21,6 +21,10 @@
     </properties>
 
     <dependencies>
+        <properties>
+            <sonar.organization>java-suraj</sonar.organization>
+            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        </properties>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
